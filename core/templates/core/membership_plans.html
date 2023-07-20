@@ -5,8 +5,24 @@
 {% block title %}Membership Plans{% endblock %}
 
 {% block content %}
-    <h2>Membership Plans</h2>
+    <h1>Membership Plans</h1>
     {% if membership_plans %}
         <ul>
             {% for plan in membership_plans %}
                 <li>
+                    <h2>{{ plan.name }}</h2>
+                    <p>{{ plan.description }}</p>
+                    <p>Pricing: ${{ plan.pricing }}/month</p>
+                    <p>Duration: {{ plan.duration }}</p>
+                    {% if plan.group_lessons %}
+                        <p>Group Lessons: Available</p>
+                    {% else %}
+                        <p>Group Lessons: Not available</p>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No membership plans available at the moment.</p>
+    {% endif %}
+{% endblock %}
