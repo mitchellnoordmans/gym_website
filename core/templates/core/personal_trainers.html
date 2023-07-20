@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Personal Training{% endblock %}
+
+{% block content %}
+    <main>
+        <h1>Personal Training</h1>
+
+        {% for trainer in trainers %}
+            <article>
+                <h2>{{ trainer.name }}</h2>
+                <p><strong>Email:</strong> {{ trainer.email }}</p>
+                <p><strong>Phone Number:</strong> {{ trainer.phone_nr }}</p>
+                <p>{{ trainer.info }}</p>
+                {% if trainer.personal_trainer %}
+                    <p><strong>Personal Trainer</strong></p>
+                {% endif %}
+            </article>
+            <hr>
+        {% endfor %}
+    </main>
+{% endblock %}

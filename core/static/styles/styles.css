@@ -1,0 +1,100 @@
+/* styles.css */
+
+/* Styles for the banner */
+.banner {
+    background-color: #500e9f;
+    padding: 15px; /* Increase padding for more space */
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Indie Flower', cursive; /* Apply the custom font to the banner */
+
+}
+
+.banner a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styles for the navigation */
+nav {
+    background-color: #333;
+    padding: 8px; /* Add padding to the navigation bar */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 8px; /* Adjust padding for a better appearance */
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Styles for the main content */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px; /* Increase padding for more space */
+}
+
+/* Styles for the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px; /* Increase padding for more space */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Additional styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #5b25d9;
+    margin-bottom: 30px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* styles.css */
+
+/* ... Your existing CSS styles ... */
+
+/* Styles for the navigation */
+nav {
+    background-color: #333;
+    padding: 8px; /* Decrease padding for less spacing */
+}
+
+nav a {
+    /* ... Your existing styles ... */
+    font-family: 'Indie Flower', cursive; /* Use the Indie Flower font */
+}

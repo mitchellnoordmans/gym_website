@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Group Lessons{% endblock %}
+
+{% block content %}
+    <main>
+        <h1>Group Lessons</h1>
+
+        {% for lesson in group_lessons %}
+            <article>
+                <h2>{{ lesson.name }}</h2>
+                <p><strong>Description:</strong> {{ lesson.description }}</p>
+                <p><strong>Trainer:</strong> {{ lesson.trainer.name }}</p>
+                <p><strong>Schedule:</strong> {{ lesson.schedule }}</p>
+                <p><strong>Duration:</strong> {{ lesson.duration }}</p>
+            </article>
+            <hr>
+        {% endfor %}
+    </main>
+{% endblock %}
