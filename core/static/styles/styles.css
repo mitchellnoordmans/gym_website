@@ -98,3 +98,157 @@ nav a {
     /* ... Your existing styles ... */
     font-family: 'Indie Flower', cursive; /* Use the Indie Flower font */
 }
+
+/* Styles for the contact form page */
+
+/* Styles for the contact form page */
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px; /* Increase border-radius for less sharp edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Increase border-radius for less sharp edges */
+}
+
+.cta-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px; /* Increase border-radius for less sharp edges */
+    transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Add this style to create a grid layout for the images */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns, each taking equal space */
+    gap: 20px; /* Add some gap between the images */
+  }
+  
+  /* Add styling for the images inside the grid */
+  .image-gallery img {
+    width: 100%; /* Make sure images take up the full width of their container */
+    border-radius: 5px; /* Add some border-radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  }
+  
+  /* styles.css */
+
+/* ... Your existing CSS styles ... */
+
+/* Styles for the services page */
+.services-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    margin-bottom: 20px;
+}
+
+.services-list h3 {
+    color: #5b25d9;
+    margin-bottom: 10px;
+}
+
+.services-list p {
+    line-height: 1.6;
+}
+
+/* Styles for the service links */
+.service-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.service-links a {
+    display: block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.service-links a:hover {
+    background-color: #0056b3;
+}
+
+/* styles.css */
+
+/* ... Your existing CSS styles ... */
+
+/* Styles for the membership plans page */
+
+h1 {
+    color: #5b25d9;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Styles for the pricing and duration paragraphs */
+p:nth-child(3),
+p:nth-child(4) {
+    font-weight: bold;
+}
+
+/* Styles for the "Group Lessons" paragraph */
+p:nth-child(5) {
+    color: #007bff;
+}
+
+/* Styles for the "Not available" group lessons */
+p:nth-child(5):last-child {
+    color: #dc3545;
+}

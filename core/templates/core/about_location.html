@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Rest of your head content -->
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <style>
+        /* Styles for the image gallery grid (provided code) */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns, each taking equal space */
+            gap: 20px; /* Add some gap between the images */
+        }
+        
+        /* Styles for the images inside the grid (provided code) */
+        .image-gallery img {
+            width: 100%; /* Make sure images take up the full width of their container */
+            border-radius: 5px; /* Add some border-radius for rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+        }
+    </style>
+</head>
+
+{% block content %}
+    <h2>Join Us Today</h2>
+    <p>More then 4500KG of weights for you to use!</p>
+    <div class="image-gallery">
+        {% for image_file in image_files %}
+            <img src="{% static 'images/' %}{{ image_file }}" alt="Image">
+        {% endfor %}
+    </div>
+
+   
+    </div>
+{% endblock %}
+

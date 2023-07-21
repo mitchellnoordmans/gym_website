@@ -1,1 +1,67 @@
 {% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+    <style>
+        /* Styles for the contact form page */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px; /* Increase border-radius for less sharp edges */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px; /* Increase border-radius for less sharp edges */
+        }
+
+        .cta-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px; /* Increase border-radius for less sharp edges */
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                {{ form.question.label_tag }}
+                {{ form.question }}
+            </div>
+            <button type="submit" class="cta-button">Submit</button>
+        </form>
+    </div>
+{% endblock %}

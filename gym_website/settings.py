@@ -147,7 +147,26 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Set the directory where static files will be collected for deployment.
 STATIC_ROOT = 'core/static/styles'
 
+
+MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'core/static/images')
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# settings.py
+
+# ... Other settings ...
+
+# Email Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'admin@info.nl'  # Replace with your Gmail email address
+EMAIL_HOST_PASSWORD = 'admin@info.nl'  # Replace with your Gmail password or app-specific password
+DEFAULT_FROM_EMAIL = 'admin@info.nl'  # Replace with your Gmail email address

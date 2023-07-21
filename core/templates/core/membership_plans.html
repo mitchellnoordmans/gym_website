@@ -1,14 +1,12 @@
-<!-- membership_plan.html -->
-
 {% extends 'base.html' %}
 
 {% block title %}Membership Plans{% endblock %}
 
 {% block content %}
     <h1>Membership Plans</h1>
-    {% if membership_plans %}
+    {% if memberships %}
         <ul>
-            {% for plan in membership_plans %}
+            {% for plan in memberships %}
                 <li>
                     <h2>{{ plan.name }}</h2>
                     <p>{{ plan.description }}</p>
@@ -19,7 +17,7 @@
                     {% else %}
                         <p>Group Lessons: Not available</p>
                     {% endif %}
-                </li>
+                    
             {% endfor %}
         </ul>
     {% else %}

@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %}{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,13 +20,95 @@
             text-decoration: none;
             color: #faf6f6;
         }
-    </style>
-</head>
-<body>
-    <!-- Rest of your HTML content -->
-</body>
-</html>
 
+        /* Styles for the navigation */
+        nav {
+            background-color: #333;
+
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        li:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            padding: 8px 12px;
+        }
+
+        .cta-button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 8px; /* Add some padding for spacing */
+        margin-top: 20px; /* Add margin to create space between the footer and CTA links */
+    }
+
+        footer p {
+        margin: 5px 0;
+    }
+
+        footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* ... Other styles ... */
+    </style>
+
+</head>
 <body>
     <header>
         <div class="banner">
@@ -35,9 +117,21 @@
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'services' %}">Services</a></li>
-                <li><a href="{% url 'personal_training' %}">Personal Training</a></li>
+                <li>
+                    <a href="{% url 'about' %}">About &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'about_location' %}">Location</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a>Services &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'services_sauna' %}">Sauna</a></li>
+                        <li><a href="{% url 'services_fysiotherapy' %}">Fysiotherapy</a></li>
+                        <li><a href="{% url 'services_sportmassage' %}">Sportmassage</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'personal_training' %}">Trainers</a></li>
                 <li><a href="{% url 'membership_plans' %}">Membership Plans</a></li>
                 <li><a href="{% url 'group_lessons' %}">Group Lessons</a></li>
                 <li><a href="{% url 'blog' %}">Blog</a></li>
@@ -50,7 +144,12 @@
         {% block content %}
         {% endblock %}
     </main>
-    
+
+    <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
+        <a class="cta-button" href="https://www.google.com/maps/place/Sportcentrum+Prim/@53.0228865,5.6709526,17z/data=!3m1!4b1!4m6!3m5!1s0x47c8f1bedbb430f3:0xb8e55f268d44b2f7!8m2!3d53.0228865!4d5.6735275!16s%2Fg%2F1ptz475h6?entry=ttu">Find Us on Google Maps</a>
+        <a class="cta-button" href="{% url 'contact' %}">Contact Us</a>
+    </div>
+
     <footer>
         <p>&copy; {% now "Y" %} Prim. All rights reserved.</p>
         <p>Email: info@example.com</p>
@@ -58,3 +157,4 @@
     </footer>
 </body>
 </html>
+

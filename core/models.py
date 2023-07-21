@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import timedelta
 
 
 # Create your models here.
@@ -17,22 +18,21 @@ class MembershipPlan(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     pricing = models.IntegerField()
-    duration = models.DurationField
-    group_lessons = models.BooleanField(default=False)
+    duration = models.DurationField(default=timedelta(days=30))
 
     def __str__(self):
         return self.name
     
 class GroupLessons(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField()
-    trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)
-    schedule = models.DateTimeField()
-    duration = models.DurationField()
-
-    def _str__(self):
-        return self.name
-    
+        name = models.CharField(max_length=100)
+        description = models.TextField()
+        trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)
+        schedule = models.CharField(max_length=50)
+        duration = models.DurationField()
+        
+        def _str__(self):
+            return self.name
+        
 class BlogPost(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
@@ -40,3 +40,10 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
+    
+class ContactForm(models.Model):
+    email = models.EmailField()
+    question = models.TextField()
+
+    def __str__(self):
+        return self.email
