@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
-from .models import BlogPost, Trainer, GroupLessons, MembershipPlan
+from .models import BlogPost, Trainer, GroupLessons, MembershipPlan, News
 from .forms import ContactForm
 from django.core.mail import EmailMessage
 import os
 
 def home(request):
-    return render(request, 'home.html')
+    news_post = News.objects.all()
+    return render(request, 'home.html', {'news_post': news_post})
 
 def about(request):
     return render(request, 'about.html')

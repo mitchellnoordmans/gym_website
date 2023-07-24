@@ -252,3 +252,17 @@ p:nth-child(5) {
 p:nth-child(5):last-child {
     color: #dc3545;
 }
+
+/* Styles for the icon links in the navigation */
+.icon-link {
+    font-size: 20px; /* Adjust the icon size */
+    color: #fff; /* Set the color of the icons */
+    padding: 8px; /* Add some padding around the icons */
+    border-radius: 50%; /* Create circular shape for the icons */
+    background-color: #555; /* Add a background color on hover */
+    transition: background-color 0.2s;
+}
+
+.icon-link:hover {
+    background-color: #007bff; /* Change background color on hover */
+}
